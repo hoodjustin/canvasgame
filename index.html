@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed text-white text-sm ml-2 mt-1 select-none">
+        <span>
+            Level: 
+            <span id="levelElement">
+                1
+            </span>
+        </span>
+        <span>
+            Score: 
+            <span id="scoreEl">
+                0
+            </span>
+        </span>
+    </div>
+
+
+    <div class="fixed inset-0 flex items-center justify-center select-none" id="modalEl">
+        <div class="bg-white max-w-d w-full p-6 text-center">
+            <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+            <p class="text-sm text-gray-700 mb-4">Points</p>
+            <div>
+                <button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="startGameBtn">start game</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 flex items-center justify-center hidden select-none" id="levelUp">
+        <div class="bg-white max-w-d w-full p-6 text-center">
+            <h1 class="text-4xl font-bold leading-none">Level up!</h1>
+        </div>
+    </div>
+
+    <div class="fixed inset-0 flex items-center justify-center hidden select-none" id="gameOver">
+        <div class="bg-white max-w-d w-full p-6 text-center">
+            <h2 class="text-4xl font-bold leading-none">game over!</h2>
+            <h1 class="text-4xl leading-none" id="endScore">0</h1>
+            <p class="text-sm text-gray-700 mb-4">Points</p>
+            <div>
+                <button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="restartGameBtn">play again</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" src="gameObjects/enemy.js"></script>
+    <script type="text/javascript" src="gameObjects/particle.js"></script>
+    <script type="text/javascript" src="gameObjects/player.js"></script>
+    <script type="text/javascript" src="gameObjects/projectile.js"></script>
+    <script type="text/javascript" src="gameObjects/powerups.js"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
